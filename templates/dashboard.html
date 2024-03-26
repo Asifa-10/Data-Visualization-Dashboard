@@ -1,0 +1,51 @@
+<!-- dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <!-- Add your CSS stylesheets here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Data Visualization Dashboard</h1>
+        </header>
+
+        <!-- Filters Section -->
+        <section id="filters">
+            <h2>Filters</h2>
+            <!-- Add your filters here -->
+            <label for="end_year">End Year:</label>
+            <input type="number" id="end_year" name="end_year">
+
+            <label for="topics">Topics:</label>
+            <select id="topics" name="topics">
+                <option value="topic1">Topic 1</option>
+                <option value="topic2">Topic 2</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <!-- Add more filters here -->
+        </section>
+
+        <!-- Visualization Section -->
+        <section id="visualization">
+            <h2>Visualization</h2>
+            <!-- Add your visualization components here -->
+            <div id="chart-container">
+                <!-- The chart will be rendered here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Add your JavaScript libraries here -->
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <!-- Add your custom JavaScript file here -->
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
